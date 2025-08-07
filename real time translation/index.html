@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Mode</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .mode-button {
+            padding: 15px 40px;
+            margin: 10px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .audio {
+            background-color: #00c851;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .audio:hover {
+            background-color: #007e33;
+            transform: scale(1.05);
+        }
+        .video {
+            background-color: #ff4444;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .video:hover {
+            background-color: #cc0000;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <h1>REAL-TIME TRANSLATOR FOR AUDIO AND VIDEO CALLS</h1>
+    <button class="mode-button audio" onclick="selectMode('audio')">🎙️ Audio Only</button>
+    <button class="mode-button video" onclick="selectMode('video')">🎥 Audio + Video</button>
+
+    <script>
+        function selectMode(mode) {
+            window.location.href = `translator.html?mode=${mode}`;
+        }
+    </script>
+</body>
+</html>
